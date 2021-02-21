@@ -6,7 +6,8 @@
   position: relative;
 }
 
-.gallery-header {
+.gallery-header,
+.num-selected-image {
   display: none;
 }
 
@@ -16,8 +17,8 @@
 
 .img-thumbnail {
   cursor: pointer;
-  height: 300px;
   width: 400px;
+  height: 200px;
 }
 
 .added {
@@ -25,7 +26,7 @@
   border-radius: 5px;
 }
 
-.img {
+img {
   height: 400px;
   object-fit: cover;
 }
@@ -38,7 +39,8 @@
   cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
   background-color: transparent;
   padding: 8px 10px;
   color: #fff;
@@ -65,4 +67,12 @@
     height: 300px;
     width: 90%;
   }
+}
+
+#not-found-warning,
+#loading-spinner {
+  display: none;
+}
+.display-flex {
+  display: flex !important;
 }

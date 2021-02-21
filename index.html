@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Image Slider</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -24,18 +25,39 @@
       </div>
       <button type="button" id="search-btn" class="btn btn-primary mb-2">Search</button>
     </div>
+
+    <!-- Spinner -->
+    <div id="loading-spinner" class="justify-content-center">
+      <div class="spinner-border" role="status">
+      </div>
+    </div>
+
     <section class="images">
       <div class="justify-content-around align-items-center mt-3 gallery-header mb-2">
         <h3 class="head-title text-center">Select image for create slider</h3>
         <div class="input-group col-md-3 mb-2 mb-md-0">
-          <input class="form-control" id="doration" placeholder="slider change duration">
+          <input class="form-control" id="duration" type="number" placeholder="slider change duration">
         </div>
         <button id="create-slider" class="btn btn-primary px-5">Create slider</button>
       </div>
+
+      <!-- num of Selected Image, Select All, Unselect All -->
+      <div class="justify-content-around align-items-center mt-3 num-selected-image mb-2">
+        <h4 class="head-title text-center">Selected Image: <span id="num-selected-img"> 10</span></h4>
+        <button id="all-selected" class="btn btn-primary px-5">Select All</button>
+        <button id="clear-selected" class="btn btn-primary px-5">Unselect All</button>
+      </div>
+
       <div class="row gallery">
 
       </div>
     </section>
+
+    <!-- Warning: No Image Found -->
+    <div id="no-result" class="justify-content-center mt-4 text-danger">
+      <h1>No Image Found</h1>
+    </div>
+
     <!-- slider -->
     <div class="main">
       <section class="mt-5" id="sliders">
