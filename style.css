@@ -69,7 +69,7 @@ img {
   }
 }
 
-#not-found-warning,
+#no-result,
 #loading-spinner {
   display: none;
 }
